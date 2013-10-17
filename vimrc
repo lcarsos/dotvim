@@ -1,6 +1,11 @@
+execute pathogen#infect()
+execute pathogen#helptags()
+syntax on
 filetype plugin indent on
-set nocompatible
+
 colorscheme wombat256
+
+set nocompatible
 set autoindent
 set expandtab
 set formatoptions=crql
@@ -12,6 +17,7 @@ set guioptions-=L
 set mouse=n
 set nowrap
 set number
+set cursorline
 set scrolloff=6
 set shiftwidth=4
 set smartindent
@@ -23,6 +29,5 @@ set undofile
 set wildchar=<tab>
 set wildmenu
 set wildmode=list:longest
-syntax on
 
 map Q <nop>

@@ -29,5 +29,5 @@ set undofile
 set wildchar=<tab>
 set wildmenu
 set wildmode=list:longest
-
+set list listchars=tab:→\ ,trail:␣,nbsp:␣
 map Q <nop>

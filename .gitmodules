@@ -1,0 +1,9 @@
+[submodule "bundle/vinarise"]
+	path = bundle/vinarise
+	url = https://github.com/Shougo/vinarise.vim.git
+[submodule "bundle/schlepp"]
+	path = bundle/schlepp
+	url = https://github.com/zirrostig/vim-schlepp.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

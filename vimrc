@@ -5,11 +5,13 @@ filetype plugin indent on
 
 colorscheme wombat256
 
+set fileencodings=utf-8,latin1
+
 set nocompatible
 set autoindent
 set expandtab
 set formatoptions=crql
-set guifont=Inconsolata
+set guifont=Inconsolatazi4
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
@@ -29,5 +31,10 @@ set undofile
 set wildchar=<tab>
 set wildmenu
 set wildmode=list:longest
-set list listchars=tab:→\ ,trail:␣,nbsp:␣
+"set list listchars=tab:→\ ,trail:␣,nbsp:␣
 map Q <nop>
+
+vmap <unique> <up>    <Plug>SchleppUp
+vmap <unique> <down>  <Plug>SchleppDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight

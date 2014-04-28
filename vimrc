@@ -12,10 +12,7 @@ set autoindent
 set expandtab
 set formatoptions=crql
 set guifont=Inconsolatazi4
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
+set guioptions=act
 set mouse=n
 set nowrap
 set number
@@ -31,8 +28,10 @@ set undofile
 set wildchar=<tab>
 set wildmenu
 set wildmode=list:longest
-"set list listchars=tab:→\ ,trail:␣,nbsp:␣
+set list listchars=tab:→\ ,trail:␣,nbsp:␣
 map Q <nop>
+
+let g:syntastic_cpp_compiler_options='-std=c++11'
 
 vmap <unique> <up>    <Plug>SchleppUp
 vmap <unique> <down>  <Plug>SchleppDown

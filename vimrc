@@ -11,7 +11,7 @@ set nocompatible
 set autoindent
 set expandtab
 set formatoptions=crql
-set guifont=Inconsolatazi4
+set guifont=Source_Code_Pro:h9:cANSI
 set guioptions=act
 set mouse=n
 set nowrap
@@ -23,13 +23,16 @@ set smartindent
 set splitbelow
 set splitright
 set tabstop=4
-set undodir=~/.vim/undofiles
-set undofile
 set wildchar=<tab>
 set wildmenu
 set wildmode=list:longest
-set list listchars=tab:→\ ,trail:␣,nbsp:␣
+"set list listchars=tab:→\ ,trail:␣,nbsp:␣
 map Q <nop>
+
+" Put swaps elsewhere, and create undofiles
+set dir=~/.vimlocal/swap
+set undodir=~/.vimlocal/undo
+set undofile
 
 let g:syntastic_cpp_compiler_options='-std=c++11'
 

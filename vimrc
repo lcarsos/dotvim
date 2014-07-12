@@ -11,7 +11,7 @@ set nocompatible
 set autoindent
 set expandtab
 set formatoptions=crql
-set guifont=Inconsolatazi4
+set guifont=Inconsolatazi4\ 9
 set guioptions=act
 set mouse=n
 set nowrap

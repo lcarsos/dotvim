@@ -31,6 +31,7 @@ map Q <nop>
 
 " Put swaps elsewhere, and create undofiles
 set dir=~/.vimlocal/swap
+set nobackup
 set undodir=~/.vimlocal/undo
 set undofile
 

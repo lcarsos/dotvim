@@ -11,7 +11,6 @@ set nocompatible
 set autoindent
 set expandtab
 set formatoptions=crql
-set guifont=Inconsolatazi4\ 9
 set guioptions=act
 set mouse=n
 set nowrap
@@ -28,6 +27,13 @@ set wildmenu
 set wildmode=list:longest
 "set list listchars=tab:→\ ,trail:␣,nbsp:␣
 map Q <nop>
+
+"Set the gui font specific to which machine I'm on
+if has("win32")
+    set guifont=Source_Code_Pro_Medium:h9:cANSI
+else
+    set guifont=Inconsolatazi4\ 9
+endif
 
 " Put swaps elsewhere, and create undofiles
 set dir=~/.vimlocal/swap

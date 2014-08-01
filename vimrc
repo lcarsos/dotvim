@@ -5,8 +5,6 @@ filetype plugin indent on
 
 colorscheme wombat256
 
-set fileencodings=utf-8,latin1
-
 set nocompatible
 set autoindent
 set expandtab

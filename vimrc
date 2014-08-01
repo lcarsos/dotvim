@@ -15,6 +15,7 @@ set guioptions=act
 set mouse=n
 set nowrap
 set number
+set ruler
 set cursorline
 set scrolloff=6
 set shiftwidth=4

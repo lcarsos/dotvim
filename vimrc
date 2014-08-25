@@ -31,7 +31,7 @@ map Q <nop>
 if has("win32")
     set guifont=Source_Code_Pro_Medium:h9:cANSI
 else
-    set guifont=Inconsolatazi4\ 9
+    set guifont=Source\ Code\ Pro\ 8
 endif
 
 " Put swaps elsewhere, and create undofiles

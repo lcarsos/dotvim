@@ -34,3 +34,6 @@
 [submodule "bundle/vim-ps1"]
 	path = bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "bundle/floobits-vim"]
+	path = bundle/floobits-vim
+	url = https://github.com/Floobits/floobits-vim

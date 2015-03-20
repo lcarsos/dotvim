@@ -40,7 +40,10 @@ set nobackup
 set undodir=~/.vimlocal/undo
 set undofile
 
+" Vim plugin configurations
 let g:syntastic_cpp_compiler_options='-std=c++11'
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
 
 vmap <unique> <up>    <Plug>SchleppUp
 vmap <unique> <down>  <Plug>SchleppDown

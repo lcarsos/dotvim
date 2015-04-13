@@ -34,3 +34,6 @@
 [submodule "bundle/neocomplete.vim"]
 	path = bundle/neocomplete.vim
 	url = github:Shougo/neocomplete.vim.git
+[submodule "bundle/haskell-vim"]
+	path = bundle/haskell-vim
+	url = https://github.com/raichoo/haskell-vim.git

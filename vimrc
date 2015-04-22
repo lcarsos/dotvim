@@ -30,7 +30,7 @@ map Q <nop>
 if has("win32")
     set guifont=Source_Code_Pro_Medium:h9:cANSI
 else
-    set guifont=Source\ Code\ Pro\ 8
+    set guifont=Source\ Code\ Pro\ 7
     set list listchars=tab:→\ ,trail:␣,nbsp:␣
 endif
 
@@ -49,3 +49,9 @@ vmap <unique> <up>    <Plug>SchleppUp
 vmap <unique> <down>  <Plug>SchleppDown
 vmap <unique> <left>  <Plug>SchleppLeft
 vmap <unique> <right> <Plug>SchleppRight
+
+" Relative line numbering when in visual mode
+nnoremap <silent> v v:<C-u>set rnu<CR>gv
+nnoremap <silent> V V:<C-u>set rnu<CR>gv
+nnoremap <silent> <C-v> <C-v>:<C-u>set rnu<CR>gv
+vnoremap <Esc> <Esc>:set nornu nu<CR>

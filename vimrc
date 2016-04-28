@@ -41,7 +41,17 @@ set undodir=~/.vimlocal/undo
 set undofile
 
 " Vim plugin configurations
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:systastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options='-std=c++14'
+let g:syntastic_python_flake8_quiet_messages={"regex":'\m\[E501\]'}
+let g:syntastic_python_pylint_quiet_messages={"regex":'\m\[fixme\]'}
+
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 

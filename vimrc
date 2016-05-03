@@ -40,10 +40,49 @@ set nobackup
 set undodir=~/.vimlocal/undo
 set undofile
 
-" Vim plugin configurations
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"Shamelessly stolen from scrooloose's vimrc
+"statusline setup
+set statusline =%#identifier#
+set statusline+=[%f]    "tail of the filename
 set statusline+=%*
+
+"display a warning if fileformat isnt unix
+set statusline+=%#warningmsg#
+set statusline+=%{&ff!='unix'?'['.&ff.']':''}
+set statusline+=%*
+
+"display a warning if file encoding isnt utf-8
+set statusline+=%#warningmsg#
+set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
+set statusline+=%*
+
+set statusline+=%h      "help file flag
+set statusline+=%y      "filetype
+
+"read only flag
+set statusline+=%#identifier#
+set statusline+=%r
+set statusline+=%*
+
+"modified flag
+set statusline+=%#warningmsg#
+set statusline+=%m
+set statusline+=%*
+
+set statusline+=%{fugitive#statusline()}
+
+"display a warning if &paste is set
+set statusline+=%#error#
+set statusline+=%{&paste?'[paste]':''}
+set statusline+=%*
+
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+set laststatus=2
+
+" Vim plugin configurations
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0

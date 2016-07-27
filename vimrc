@@ -90,6 +90,7 @@ let g:systastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options='-std=c++14'
 let g:syntastic_python_flake8_quiet_messages={"regex":'\m\[E501\]'}
 let g:syntastic_python_pylint_quiet_messages={"regex":'\m\[\(fixme\|invalid-name\|no-member\)\]'}
+let g:syntastic_python_pylint_quiet_messages={"regex":'\m\[\(fixme\|invalid-name\|too-few-public-methods\|no-member\)\]'}
 
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1

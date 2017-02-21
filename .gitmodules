@@ -4,9 +4,6 @@
 [submodule "bundle/schlepp"]
     path = bundle/schlepp
     url = https://github.com/zirrostig/vim-schlepp.git
-[submodule "bundle/syntastic"]
-    path = bundle/syntastic
-    url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/supertab"]
     path = bundle/supertab
     url = https://github.com/ervandew/supertab.git
@@ -55,3 +52,6 @@
 [submodule "bundle/Dockerfile.vim"]
 	path = bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/w0rp/ale.git

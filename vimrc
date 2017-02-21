@@ -90,17 +90,6 @@ let g:javascript_plugin_flow = 1
 " vim-jsx
 let g:jsx_ext_required = 0
 
-" syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:systastic_check_on_wq = 0
-let g:syntastic_cpp_compiler_options='-std=c++14'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_python_python_exec = '/usr/bin/python3'
-let g:syntastic_python_flake8_quiet_messages={"regex":'\m\[\(E124\|E127\|E501\|F401\)\]'}
-let g:syntastic_python_pylint_quiet_messages={"regex":'\m\[\(fixme\|invalid-name\|too-few-public-methods\|no-member\)\]'}
-
 " neocomplete.vim
 let g:neocomplete#enable_at_startup = 0
 let g:neocomplete#enable_smart_case = 1

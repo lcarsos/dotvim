@@ -1,11 +1,25 @@
 "execute pathogen#infect()
 "execute pathogen#helptags()
-syntax on
+set nocompatible
+
+" Dein plugin management
+set runtimepath+=~/.vim/bundles/dein.vim
+
+if dein#load_state('~/.vim/bundles')
+    call dein#begin('~/.vim/bundles')
+    call dein#add('~/.vim/bundles/dein.vim')
+
+    call dein#add('https://github.com/shougo/vinarise.vim')
+
+    call dein#end()
+    call dein#save_state()
+endif
+
 filetype plugin indent on
+syntax enable
 
 colorscheme wombat256
 
-set nocompatible
 set autoindent
 set expandtab
 set formatoptions=crql

@@ -1,5 +1,5 @@
-execute pathogen#infect()
-execute pathogen#helptags()
+"execute pathogen#infect()
+"execute pathogen#helptags()
 syntax on
 filetype plugin indent on
 
@@ -81,21 +81,6 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 " Vim plugin configurations
-
-" vim-javascript
-let g:javascript_plugin_flow = 1
-
-" vim-jsx
-let g:jsx_ext_required = 0
-
-" neocomplete.vim
-let g:neocomplete#enable_at_startup = 0
-let g:neocomplete#enable_smart_case = 1
-
-vmap <unique> <up>    <Plug>SchleppUp
-vmap <unique> <down>  <Plug>SchleppDown
-vmap <unique> <left>  <Plug>SchleppLeft
-vmap <unique> <right> <Plug>SchleppRight
 
 " Relative line numbering when in visual mode
 nnoremap <silent> v v:<C-u>set rnu<CR>gv

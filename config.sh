@@ -2,4 +2,4 @@
 # Because I felt like a bad person for writing a windows config file. I made
 # this to feel better about myself
 
-mkdir -p ~/.vimlocal/{swap,undo}
+mkdir -p ~/.local/share/vim/{swap,undo}

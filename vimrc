@@ -3,12 +3,25 @@
 set nocompatible
 
 " Dein plugin management
-set runtimepath+=~/.vim/bundles/dein.vim
+set runtimepath+=~/.cache/vim/bundles/repos/github.com/shougo/dein.vim
 
-if dein#load_state('~/.vim/bundles')
-    call dein#begin('~/.vim/bundles')
-    call dein#add('~/.vim/bundles/dein.vim')
+if dein#load_state('~/.cache/vim/bundles')
+    call dein#begin('~/.cache/vim/bundles')
+    "ugh. I hate this path crap that dein forces you into
+    call dein#add('~/.cache/vim/bundles/repos/github.com/shougo/dein.vim')
 
+    " List of plugins
+    " ale
+    call dein#add('https://github.com/dense-analysis/ale.git')
+
+    " deoplete
+    call dein#add('https://github.com/shougo/deoplete.nvim')
+    if !has('nvim')
+        call dein#add('https://github.com/roxma/nvim-yarp')
+        call dein#add('https://github.com/roxma/vim-hug-neovim-rpc')
+    endif
+
+    " vinarise
     call dein#add('https://github.com/shougo/vinarise.vim')
 
     call dein#end()
@@ -49,9 +62,9 @@ else
 endif
 
 " Put swaps elsewhere, and create undofiles
-set dir=~/.vimlocal/swap
+set dir=~/.local/share/vim/swap
 set nobackup
-set undodir=~/.vimlocal/undo
+set undodir=~/.local/share/vim/undo
 set undofile
 
 "Shamelessly stolen from scrooloose's vimrc
@@ -95,6 +108,12 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 " Vim plugin configurations
+let g:deoplete#enable_at_startup = 1
+
+" Uncomment to limit deoplete to only ale-fueled completions
+"call deoplete#custom#option('sources', {
+"\ '_': ['ale'],
+"\})
 
 " Relative line numbering when in visual mode
 nnoremap <silent> v v:<C-u>set rnu<CR>gv

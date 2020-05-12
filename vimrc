@@ -12,7 +12,7 @@ if dein#load_state('~/.cache/vim/bundles')
 
     " List of plugins
     " ale
-    call dein#add('https://github.com/dense-analysis/ale.git')
+    call dein#add('https://github.com/dense-analysis/ale')
 
     " deoplete
     call dein#add('https://github.com/shougo/deoplete.nvim')
@@ -20,6 +20,15 @@ if dein#load_state('~/.cache/vim/bundles')
         call dein#add('https://github.com/roxma/nvim-yarp')
         call dein#add('https://github.com/roxma/vim-hug-neovim-rpc')
     endif
+
+    " deoplete-jedi
+    call dein#add('https://github.com/deoplete-plugins/deoplete-jedi')
+
+    " deoplete-zsh
+    call dein#add('https://github.com/deoplete-plugins/deoplete-zsh')
+
+    " rust.vim
+    call dein#add('https://github.com/rust-lang/rust.vim')
 
     " vinarise
     call dein#add('https://github.com/shougo/vinarise.vim')

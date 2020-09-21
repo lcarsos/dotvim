@@ -27,6 +27,9 @@ if dein#load_state('~/.cache/vim/bundles')
     " deoplete-zsh
     call dein#add('https://github.com/deoplete-plugins/deoplete-zsh')
 
+    " deoplete-rust
+    call dein#add('https://github.com/sebastianmarkow/deoplete-rust')
+
     " rust.vim
     call dein#add('https://github.com/rust-lang/rust.vim')
 
@@ -119,6 +122,8 @@ set laststatus=2
 " Vim plugin configurations
 let g:deoplete#enable_at_startup = 1
 
+" deoplete configs
+let g:python3_host_prog = '/usr/bin/python3'
 " Uncomment to limit deoplete to only ale-fueled completions
 "call deoplete#custom#option('sources', {
 "\ '_': ['ale'],

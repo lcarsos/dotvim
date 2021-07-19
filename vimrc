@@ -124,6 +124,8 @@ let g:deoplete#enable_at_startup = 1
 
 " deoplete configs
 let g:python3_host_prog = '/usr/bin/python3'
+let g:deoplete#sources#rust#racer_binary='/home/echo/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/echo/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src'
 " Uncomment to limit deoplete to only ale-fueled completions
 "call deoplete#custom#option('sources', {
 "\ '_': ['ale'],

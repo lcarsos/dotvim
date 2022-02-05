@@ -2,43 +2,48 @@
 "execute pathogen#helptags()
 set nocompatible
 
+lua require('plugins')
+
 " Dein plugin management
-set runtimepath+=~/.cache/vim/bundles/repos/github.com/shougo/dein.vim
-
-if dein#load_state('~/.cache/vim/bundles')
-    call dein#begin('~/.cache/vim/bundles')
-    "ugh. I hate this path crap that dein forces you into
-    call dein#add('~/.cache/vim/bundles/repos/github.com/shougo/dein.vim')
-
-    " List of plugins
-    " ale
-    call dein#add('https://github.com/dense-analysis/ale')
-
-    " deoplete
-    call dein#add('https://github.com/shougo/deoplete.nvim')
-    if !has('nvim')
-        call dein#add('https://github.com/roxma/nvim-yarp')
-        call dein#add('https://github.com/roxma/vim-hug-neovim-rpc')
-    endif
-
-    " deoplete-jedi
-    call dein#add('https://github.com/deoplete-plugins/deoplete-jedi')
-
-    " deoplete-zsh
-    call dein#add('https://github.com/deoplete-plugins/deoplete-zsh')
-
-    " deoplete-rust
-    call dein#add('https://github.com/sebastianmarkow/deoplete-rust')
-
-    " rust.vim
-    call dein#add('https://github.com/rust-lang/rust.vim')
-
-    " vinarise
-    call dein#add('https://github.com/shougo/vinarise.vim')
-
-    call dein#end()
-    call dein#save_state()
-endif
+"set runtimepath+=~/.cache/vim/bundles/repos/github.com/shougo/dein.vim
+"
+"if dein#load_state('~/.cache/vim/bundles')
+"    call dein#begin('~/.cache/vim/bundles')
+"    "ugh. I hate this path crap that dein forces you into
+"    call dein#add('~/.cache/vim/bundles/repos/github.com/shougo/dein.vim')
+"
+"    " List of plugins
+"    " ale
+"    call dein#add('https://github.com/dense-analysis/ale')
+"
+"    " lspconfig
+"    call dein#add('https://github.com/neovim/nvim-lspconfig')
+"
+"    " deoplete
+"    call dein#add('https://github.com/shougo/deoplete.nvim')
+"    if !has('nvim')
+"        call dein#add('https://github.com/roxma/nvim-yarp')
+"        call dein#add('https://github.com/roxma/vim-hug-neovim-rpc')
+"    endif
+"
+"    " deoplete-jedi
+"    call dein#add('https://github.com/deoplete-plugins/deoplete-jedi')
+"
+"    " deoplete-zsh
+"    call dein#add('https://github.com/deoplete-plugins/deoplete-zsh')
+"
+"    " deoplete-rust
+"    call dein#add('https://github.com/sebastianmarkow/deoplete-rust')
+"
+"    " rust.vim
+"    call dein#add('https://github.com/rust-lang/rust.vim')
+"
+"    " vinarise
+"    call dein#add('https://github.com/shougo/vinarise.vim')
+"
+"    call dein#end()
+"    call dein#save_state()
+"endif
 
 filetype plugin indent on
 syntax enable
@@ -119,13 +124,15 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set laststatus=2
 
+lua require('lsp')
+
 " Vim plugin configurations
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
 " deoplete configs
 let g:python3_host_prog = '/usr/bin/python3'
-let g:deoplete#sources#rust#racer_binary='/home/echo/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/echo/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src'
+"let g:deoplete#sources#rust#racer_binary='/home/echo/.cargo/bin/racer'
+"let g:deoplete#sources#rust#rust_source_path='/home/echo/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src'
 " Uncomment to limit deoplete to only ale-fueled completions
 "call deoplete#custom#option('sources', {
 "\ '_': ['ale'],

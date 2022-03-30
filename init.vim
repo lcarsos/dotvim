@@ -79,9 +79,9 @@ else
 endif
 
 " Put swaps elsewhere, and create undofiles
-set dir=~/.local/share/vim/swap
+set dir=~/.local/share/nvim/swap
 set nobackup
-set undodir=~/.local/share/vim/undo
+set undodir=~/.local/share/nvim/undo
 set undofile
 
 "Shamelessly stolen from scrooloose's vimrc

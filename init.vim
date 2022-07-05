@@ -125,6 +125,7 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 lua require('lsp')
+lua require('mycmp')
 
 " Vim plugin configurations
 "let g:deoplete#enable_at_startup = 1

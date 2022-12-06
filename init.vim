@@ -54,7 +54,7 @@ set autoindent
 set expandtab
 set formatoptions=crql
 set guioptions=act
-set mouse=n
+set mouse=nv
 set nowrap
 set number
 set ruler

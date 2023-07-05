@@ -126,6 +126,7 @@ set laststatus=2
 
 lua require('lsp')
 lua require('mycmp')
+lua require('treesitter')
 
 " Vim plugin configurations
 "let g:deoplete#enable_at_startup = 1

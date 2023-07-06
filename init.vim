@@ -125,7 +125,7 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 lua require('lsp')
-lua require('mycmp')
+"lua require('mycmp')
 lua require('treesitter')
 
 " Vim plugin configurations
@@ -145,3 +145,5 @@ nnoremap <silent> v v:<C-u>set rnu<CR>gv
 nnoremap <silent> V V:<C-u>set rnu<CR>gv
 nnoremap <silent> <C-v> <C-v>:<C-u>set rnu<CR>gv
 vnoremap <Esc> <Esc>:set nornu nu<CR>
+vnoremap y y:set nornu nu<CR>
+vnoremap p p:set nornu nu<CR>

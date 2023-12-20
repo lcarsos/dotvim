@@ -37,4 +37,5 @@ return require('packer').startup(function()
     use 'rust-lang/rust.vim'
     use 'shougo/vinarise.vim'
     use 'hashivim/vim-terraform'
+    use 'github/copilot.vim'
 end)

@@ -14,6 +14,22 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
+
+--local lspconf = require 'lspconfig'
+--local lspconfigs = require 'lspconfig.configs'
+--if not lspconfigs.janky then
+--    lspconfigs.janky = {
+--        default_config= {
+--            cmd = { 'java', '-jar', '$HOME/code/repos/groovy-language-server/build/libs/groovy-language-server-all.jar' },
+--            filetypes = {'groovy', 'jenkinsfile'},
+--            root_dir = function(fname)
+--                return lspconf.util.find_git_ancestor(fname)
+--            end,
+--        },
+--    }
+--end
+--lspconf.janky.setup{}
+
 --local opts = { noremap=true, silent=true }
 --vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 --vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)

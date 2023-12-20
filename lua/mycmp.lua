@@ -69,3 +69,6 @@ require('lspconfig')['denols'].setup {
 require('lspconfig')['pylsp'].setup {
   capabilities = capabilities
 }
+--require('lspconfig')['groovyls'].setup {
+--  capabilities = capabilities
+--}

@@ -147,3 +147,5 @@ nnoremap <silent> <C-v> <C-v>:<C-u>set rnu<CR>gv
 vnoremap <Esc> <Esc>:set nornu nu<CR>
 vnoremap y y:set nornu nu<CR>
 vnoremap p p:set nornu nu<CR>
+
+nnoremap <silent> <Esc><Esc> :nohl<CR>

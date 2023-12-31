@@ -1,17 +1,20 @@
 set nocompatible
+set termguicolors
 
 lua require('plugins')
 
 filetype plugin indent on
 syntax enable
 
-colorscheme wombat256
+lua require('colorscheme')
+"colorscheme kanagawa
 
 set autoindent
 set expandtab
 set formatoptions=crql
 set guioptions=act
 set mouse=av
+set mousemodel=extend
 set nowrap
 set number
 set ruler

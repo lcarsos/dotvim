@@ -34,8 +34,11 @@ return require('packer').startup(function()
     }
     use 'nvim-treesitter/playground'
 
-    use 'rust-lang/rust.vim'
+    --use 'rust-lang/rust.vim'
     use 'shougo/vinarise.vim'
-    use 'hashivim/vim-terraform'
+    --use 'hashivim/vim-terraform'
+
+    use 'rebelot/kanagawa.nvim'
+
     use 'github/copilot.vim'
 end)

@@ -43,14 +43,14 @@ if not pcall(function ()
     if not undopath:is_dir() then
         undopath:mkdir({parents = true})
     end
+    vim.o.dir = swappath:expand()
+    vim.o.undodir = undopath:expand()
+    vim.o.undofile = true
 end) then
     print('Plenary not installed. You must set up swap and undo directories manually.')
 end
 
 
-vim.o.dir = swapdir
-vim.o.undodir = undodir
-vim.o.undofile = true
 
 --Shamelessly stolen from scrooloose's vimrc
 --statusline setup

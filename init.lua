@@ -30,16 +30,16 @@ vim.o.listchars = 'tab:→\\ ,trail:␣,nbsp:␣,extends:❯,precedes:❮'
 vim.o.backup = false
 
 -- Set up swap and undo directories
-local path = require('plenary.path')
-local swapdir = '~/.local/share/nvim/swap'
-if not path:new(swapdir):is_dir() then
-    path:new(swapdir):mkdir({parents = true})
-end
+--local path = require('plenary.path')
+local swapdir = '/home/echo/.local/share/nvim/swap'
+--if not path:new(swapdir):expand().is_dir() then
+--    path:new(swapdir):expand():mkdir({parents = true})
+--end
 vim.o.dir = swapdir
-local undodir = '~/.local/share/nvim/undo'
-if not path:new(undodir):is_dir() then
-    path:new(undodir):mkdir({parents = true})
-end
+local undodir = '/home/echo/.local/share/nvim/undo'
+--if not path:new(undodir):expand():is_dir() then
+--    path:new(undodir):expand():mkdir({parents = true})
+--end
 vim.o.undodir = undodir
 vim.o.undofile = true
 

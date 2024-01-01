@@ -30,16 +30,25 @@ vim.o.listchars = 'tab:→\\ ,trail:␣,nbsp:␣,extends:❯,precedes:❮'
 vim.o.backup = false
 
 -- Set up swap and undo directories
---local path = require('plenary.path')
-local swapdir = '/home/echo/.local/share/nvim/swap'
---if not path:new(swapdir):expand().is_dir() then
---    path:new(swapdir):expand():mkdir({parents = true})
---end
+local swapdir = '~/.local/share/nvim/swap'
+local undodir = '~/.local/share/nvim/undo'
+
+if not pcall(function ()
+    local Path = require('plenary.path')
+    local swappath = Path:new(Path:new(swapdir):expand())
+    if not swappath:is_dir() then
+        swappath:mkdir({parents = true})
+    end
+    local undopath = Path:new(Path:new(undodir):expand())
+    if not undopath:is_dir() then
+        undopath:mkdir({parents = true})
+    end
+end) then
+    print('Plenary not installed. You must set up swap and undo directories manually.')
+end
+
+
 vim.o.dir = swapdir
-local undodir = '/home/echo/.local/share/nvim/undo'
---if not path:new(undodir):expand():is_dir() then
---    path:new(undodir):expand():mkdir({parents = true})
---end
 vim.o.undodir = undodir
 vim.o.undofile = true
 

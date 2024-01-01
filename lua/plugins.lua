@@ -1,6 +1,7 @@
 --git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
+    use 'nvim-lua/plenary.nvim'
 
     use {
       'VonHeikemen/lsp-zero.nvim',

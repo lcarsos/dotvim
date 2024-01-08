@@ -92,13 +92,13 @@ vim.o.statusline = "%#identifier#" ..
                    " %P"      --percent through file
 
 -- Set up relative line numbering in visual mode
-vim.keymap.set('n', '<silent> v', 'v:<C-u>set rnu<CR>gv')
-vim.keymap.set('n', '<silent> V', 'V:<C-u>set rnu<CR>gv')
-vim.keymap.set('n', '<silent> <C-v>', '<C-v>:<C-u>set rnu<CR>gv')
+vim.keymap.set('n', 'v', 'v:<C-u>set rnu<CR>gv', { silent = true })
+vim.keymap.set('n', 'V', 'V:<C-u>set rnu<CR>gv', { silent = true })
+vim.keymap.set('n', '<C-v>', '<C-v>:<C-u>set rnu<CR>gv', { silent = true })
 vim.keymap.set('v', '<Esc>', '<Esc>:set nornu nu<CR>')
 vim.keymap.set('v', 'y', 'y:set nornu nu<CR>')
 vim.keymap.set('v', 'p', 'p:set nornu nu<CR>')
 vim.keymap.set('v', 'd', 'd:set nornu nu<CR>')
 
-vim.keymap.set('n', '<silent> <Esc><Esc>', ':nohl<CR>')
+vim.keymap.set('n', '<Esc><Esc>', ':nohl<CR>', { silent = true })
 vim.keymap.set({'n', 'i', 'v'}, 'Q', '<Nop>')  -- When has this ever been useful?

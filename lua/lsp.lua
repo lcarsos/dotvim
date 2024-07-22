@@ -10,7 +10,24 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+-- require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+local conf = require('lspconfig')
+
+conf.gdscript.setup({})
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    function(server_name)
+      require('lspconfig')[server_name].setup({})
+    end,
+
+    godot_server = function()
+        require('lspconfig').godot_server.setup({})
+    end,
+  },
+})
 
 lsp.setup()
 

@@ -28,16 +28,18 @@ return require('packer').startup(function()
       }
     }
 
+    use 'lommix/godot.nvim'
 
+    -- highlighting
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
     use 'nvim-treesitter/playground'
 
-    --use 'rust-lang/rust.vim'
+    use 'mfussenegger/nvim-dap'
+
     use 'shougo/vinarise.vim'
-    --use 'hashivim/vim-terraform'
 
     use 'rebelot/kanagawa.nvim'
 

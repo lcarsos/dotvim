@@ -6,6 +6,7 @@ require('plugins')
 require('colorscheme')
 require('lsp')
 require('treesitter')
+require('tele')
 
 vim.o.autoindent = true
 vim.o.expandtab = true
@@ -101,4 +102,4 @@ vim.keymap.set('v', 'p', 'p:set nornu nu<CR>')
 vim.keymap.set('v', 'd', 'd:set nornu nu<CR>')
 
 vim.keymap.set('n', '<Esc><Esc>', ':nohl<CR>', { silent = true })
-vim.keymap.set({'n', 'i', 'v'}, 'Q', '<Nop>')  -- When has this ever been useful?
+vim.keymap.set({'n', 'v'}, 'Q', '<Nop>')  -- When has this ever been useful?

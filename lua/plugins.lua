@@ -28,6 +28,18 @@ return require('packer').startup(function()
       }
     }
 
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'burntsushi/ripgrep'},
+            {
+                'nvim-telescope/telescope-fzf-native.nvim',
+                run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release'
+            },
+        }
+    }
+
     use 'lommix/godot.nvim'
 
     -- highlighting

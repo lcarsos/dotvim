@@ -8,27 +8,28 @@ require('lsp')
 require('treesitter')
 require('tele')
 
-vim.o.autoindent = true
-vim.o.expandtab = true
-vim.o.formatoptions = "crqlj"
+vim.opt.autoindent = true
+vim.opt.expandtab = true
+vim.opt.formatoptions = "crqlj"
 --vim.o.guioptions = 'act'
-vim.o.mouse = "av"
-vim.o.mousemodel = "extend"
-vim.o.wrap = false
-vim.o.number = true
-vim.o.ruler = true
-vim.o.cursorline = true
-vim.o.scrolloff = 6
-vim.o.shiftwidth = 4
-vim.o.smartindent = true
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.tabstop = 4
-vim.o.wildchar = ('\t'):byte()
-vim.o.wildmenu = true
-vim.o.wildmode = 'list:longest'
-vim.o.listchars = 'tab:→\\ ,trail:␣,nbsp:␣,extends:❯,precedes:❮'
-vim.o.backup = false
+vim.opt.mouse = "av"
+vim.opt.mousemodel = "extend"
+vim.opt.wrap = false
+vim.opt.number = true
+vim.opt.ruler = true
+vim.opt.cursorline = true
+vim.opt.scrolloff = 6
+vim.opt.shiftwidth = 4
+vim.opt.smartindent = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.tabstop = 4
+vim.opt.wildchar = ('\t'):byte()
+vim.opt.wildmenu = true
+vim.opt.wildmode = 'list:longest'
+vim.opt.list = true
+vim.opt.listchars = 'tab:» ,trail:␣,nbsp:␣,extends:❯,precedes:❮'
+vim.opt.backup = false
 
 -- Set up swap and undo directories
 local swapdir = '~/.local/share/nvim/swap'

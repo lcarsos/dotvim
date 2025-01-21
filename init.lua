@@ -1,13 +1,6 @@
 vim.g.mapleader = "'"
 vim.g.maplocalleader = "'"
 
-require('plugins')
-
-require('colorscheme')
-require('lsp')
-require('treesitter')
-require('tele')
-
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.formatoptions = "crqlj"
@@ -31,10 +24,15 @@ vim.opt.list = true
 vim.opt.listchars = 'tab:» ,trail:␣,nbsp:␣,extends:❯,precedes:❮'
 vim.opt.backup = false
 
+
+require('plugins')
+
+--require('lsp')
+
+
 -- Set up swap and undo directories
 local swapdir = '~/.local/share/nvim/swap'
 local undodir = '~/.local/share/nvim/undo'
-
 if not pcall(function ()
     local Path = require('plenary.path')
     local swappath = Path:new(Path:new(swapdir):expand())
@@ -45,9 +43,9 @@ if not pcall(function ()
     if not undopath:is_dir() then
         undopath:mkdir({parents = true})
     end
-    vim.o.dir = swappath:expand()
-    vim.o.undodir = undopath:expand()
-    vim.o.undofile = true
+    vim.opt.dir = swappath:expand()
+    vim.opt.undodir = undopath:expand()
+    vim.opt.undofile = true
 end) then
     print('Plenary not installed. You must set up swap and undo directories manually.')
 end
@@ -56,7 +54,7 @@ end
 
 --Shamelessly stolen from scrooloose's vimrc
 --statusline setup
-vim.o.statusline = "%#identifier#" ..
+vim.opt.statusline = "%#identifier#" ..
                    "[%f]" ..    --tail of the filename
                    "%*" ..
 

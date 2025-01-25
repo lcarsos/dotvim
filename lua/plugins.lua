@@ -163,54 +163,59 @@ require("lazy").setup({
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
-            {
-              name = 'lazydev',
-              -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
-              group_index = 0,
-            },
-            { name = 'nvim_lsp' },
-            { name = 'luasnip' },
-            { name = 'path' },
+          {
+            name = 'lazydev',
+            -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
+            group_index = 0,
           },
-        }
-      end,
-    },
-
-    -- Highlighting
-    {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate',
-        main = 'nvim-treesitter.configs',
-        opts = {
-          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "python", "rust" },
-          auto_install = true,
-          highlight = {
-            enable = true,
-
-            disable = function(lang, buf)
-              local max_filesize = 1024 * 1024 -- 1 MB
-              local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-              if ok and stats and stats.size > max_filesize then
-                return true
-              end
-            end,
-
-            additional_vim_regex_highlighting = false,
+          { name = 'nvim_lsp' },
+          { name = 'luasnip' },
+          { name = 'path' },
         },
-        indent = { enable = true } },
-    },
-    'nvim-treesitter/playground',
+      }
+    end,
+  },
 
-    -- Colorscheme
-    {
-      'rebelot/kanagawa.nvim',
-      opts = {
-        transparent = true,
-        colors = { theme = { all = { ui = { bg_gutter = "none" } } } },
-      },
-      init = function()
-        vim.cmd("colorscheme kanagawa")
-      end,
-    },
+  -- Highlighting
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    main = 'nvim-treesitter.configs',
+    opts = {
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "python", "rust" },
+      auto_install = true,
+      highlight = {
+        enable = true,
 
-  })
+        disable = function(lang, buf)
+          local max_filesize = 1024 * 1024 -- 1 MB
+          local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+          if ok and stats and stats.size > max_filesize then
+            return true
+          end
+        end,
+
+        additional_vim_regex_highlighting = false,
+    },
+    indent = { enable = true } },
+  },
+  'nvim-treesitter/playground',
+
+  -- Colorscheme
+  {
+    'rebelot/kanagawa.nvim',
+    opts = {
+      transparent = true,
+      colors = { theme = { all = { ui = { bg_gutter = "none" } } } },
+    },
+    init = function()
+      vim.cmd("colorscheme kanagawa")
+    end,
+  },
+
+  {
+    'github/copilot.vim',
+    event = 'InsertEnter',
+  },
+
+})

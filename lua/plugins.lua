@@ -74,9 +74,6 @@ require("lazy").setup({
             function(server_name)
               require('lspconfig')[server_name].setup({})
             end,
-            godot_server = function()
-              require('lspconfig').godot_server.setup({})
-            end,
           },
         },
       },
@@ -196,8 +193,12 @@ require("lazy").setup({
         end,
 
         additional_vim_regex_highlighting = false,
+      },
+      indent = {
+        enable = true,
+        disable = { },
+      },
     },
-    indent = { enable = true } },
   },
   'nvim-treesitter/playground',
 
@@ -212,10 +213,6 @@ require("lazy").setup({
       vim.cmd("colorscheme kanagawa")
     end,
   },
-
-  {
-    'github/copilot.vim',
-    event = 'InsertEnter',
-  },
-
 })
+
+-- set ts=2 sw=2; vim

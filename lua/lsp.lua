@@ -23,9 +23,9 @@ require('mason-lspconfig').setup({
       require('lspconfig')[server_name].setup({})
     end,
 
-    godot_server = function()
-        require('lspconfig').godot_server.setup({})
-    end,
+    --godot_server = function()
+    --    require('lspconfig').godot_server.setup({})
+    --end,
   },
 })
 

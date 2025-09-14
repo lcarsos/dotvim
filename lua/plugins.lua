@@ -277,6 +277,14 @@ require("lazy").setup({
       vim.cmd("colorscheme kanagawa")
     end,
   },
+
+
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = {},
+  },
 })
 
--- set ts=2 sw=2; vim
+-- vim: set ts=2 sw=2; vim

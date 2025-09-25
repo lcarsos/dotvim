@@ -283,7 +283,11 @@ require("lazy").setup({
     'zbirenbaum/copilot.lua',
     cmd = "Copilot",
     event = "InsertEnter",
-    opts = {},
+    opts = {
+      filetypes = {
+        terraform = true,
+      },
+    },
   },
 })
 

@@ -66,7 +66,19 @@ require("lazy").setup({
           ensure_installed = {},
           handlers = {
             function(server_name)
-              require('lspconfig')[server_name].setup({})
+              local server_configs = {
+                pylsp = {
+                  plugins = {
+                    pycodestyle = { enabled = false },
+                    pyflakes = { enabled = false },
+                  },
+                },
+              }
+              local opts = {}
+              if server_configs[server_name] then
+                opts = server_configs[server_name]
+              end
+              require('lspconfig')[server_name].setup(opts)
             end,
           },
         },
@@ -291,4 +303,4 @@ require("lazy").setup({
   },
 })
 
--- vim: set ts=2 sw=2; vim
+-- vim: set ts=2 sw=2: vim

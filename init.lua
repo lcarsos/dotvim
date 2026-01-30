@@ -50,6 +50,14 @@ end) then
     print('Plenary not installed. You must set up swap and undo directories manually.')
 end
 
+vim.g.python_indent = {
+    disable_pantheses_indenting=false,
+    closed_paren_align_last_line=false,
+    searchpair_timeout=150,
+    continue='shiftwidth()',
+    open_paren='shiftwidth()',
+    close_paren='shiftwidth()'
+}
 
 
 --Shamelessly stolen from scrooloose's vimrc

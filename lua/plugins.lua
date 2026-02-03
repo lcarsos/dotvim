@@ -64,22 +64,17 @@ require("lazy").setup({
         'williamboman/mason-lspconfig.nvim',
         opts = {
           ensure_installed = {},
-          handlers = {
-            function(server_name)
-              local server_configs = {
+          servers = {
+            pylsp = {
+              settings = {
                 pylsp = {
                   plugins = {
                     pycodestyle = { enabled = false },
                     pyflakes = { enabled = false },
                   },
                 },
-              }
-              local opts = {}
-              if server_configs[server_name] then
-                opts = server_configs[server_name]
-              end
-              require('lspconfig')[server_name].setup(opts)
-            end,
+              },
+            },
           },
         },
       },

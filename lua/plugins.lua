@@ -64,23 +64,24 @@ require("lazy").setup({
         'williamboman/mason-lspconfig.nvim',
         opts = {
           ensure_installed = {},
-          servers = {
-            pylsp = {
-              settings = {
-                pylsp = {
-                  plugins = {
-                    pycodestyle = { enabled = false },
-                    pyflakes = { enabled = false },
-                  },
-                },
-              },
-            },
-          },
         },
       },
       'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      vim.lsp.config('*', { capabilities = capabilities })
+      vim.lsp.config('pylsp', {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = { enabled = false },
+              pyflakes = { enabled = false },
+            },
+          },
+        },
+      })
+
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)

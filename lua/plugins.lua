@@ -295,6 +295,14 @@ require("lazy").setup({
       filetypes = {
         terraform = true,
       },
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        keymap = {
+          accept_word = "<S-Tab>",
+          accept_line = "<Tab>",
+        }
+      }
     },
   },
 })
